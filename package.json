@@ -1,0 +1,32 @@
+{
+  "name": "aws-ses",
+  "version": "1.0.0",
+  "description": "* npm install express * npm install public-ip  * npm install request",
+  "main": "app.js",
+  "dependencies": {
+    "aws-sdk": "^2.7.7",
+    "body-parser": "^1.15.2",
+    "dotenv": "^2.0.0",
+    "express": "^4.14.0",
+    "install": "^0.8.2",
+    "nodemailer": "^2.6.4",
+    "nodemailer-sendgrid-transport": "^0.2.0",
+    "nodemailer-smtp-transport": "^2.7.2",
+    "npm": "^4.0.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/malinda89/node-work.git"
+  },
+  "keywords": [],
+  "author": "Malinda Wellalage",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/malinda89/node-work/issues"
+  },
+  "homepage": "https://github.com/malinda89/node-work#readme"
+}
