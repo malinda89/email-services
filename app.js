@@ -1,14 +1,14 @@
 const
-	express = require('express'),
+  express = require('express'),
   bodyParser = require("body-parser"),
-	dotenv = require('dotenv'),
+  dotenv = require('dotenv'),
   sesRoutes = require('./email_services/ses'),
   smtpRoutes = require('./email_services/smtp'),
   sendgridRoutes = require('./email_services/sendgrid');
 
-const 
+const
   app = express(),
-  router  = express.Router();
+  router = express.Router();
 
 dotenv.load();
 
@@ -23,5 +23,5 @@ app
   .use('/sendgrid', sendgridRoutes);
 
 app.listen(process.env.PORT || 8000, () => {
-	console.log('Server started...');
+  console.log('Server started...');
 });
