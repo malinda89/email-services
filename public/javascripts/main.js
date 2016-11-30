@@ -1,16 +1,16 @@
 $(function() {
 
   // Load SES configurations from local storage
-  var sesConfigs = localStorage.getItem('sesConfigs') ? JSON.parse(localStorage.getItem('sesConfigs')) : null;
-  if (sesConfigs) {
+  var sesConfigs = JSON.parse(localStorage.sesConfigs || '{}');
+  if (!$.isEmptyObject(sesConfigs)) {
     $('#access_key').val(sesConfigs.accessKeyId);
     $('#secret_key').val(sesConfigs.secretAccessKey);
     $('#region').val(sesConfigs.region);
   }
 
   // Load SMTP configurations from local storage
-  var smtpConfigs = localStorage.getItem('smtpConfigs') ? JSON.parse(localStorage.getItem('smtpConfigs')) : null;
-  if (smtpConfigs) {
+  var smtpConfigs = JSON.parse(localStorage.smtpConfigs || '{}');
+  if (!$.isEmptyObject(smtpConfigs)) {
     $('#smtp_host').val(smtpConfigs.host);
     $('#smtp_port').val(smtpConfigs.port);
     $('#smtp_username').val(smtpConfigs.auth.user);
@@ -18,8 +18,8 @@ $(function() {
   }
 
   // Load Sendgrid configurations from local storage
-  var sendgridConfigs = localStorage.getItem('sendgridConfigs') ? JSON.parse(localStorage.getItem('sendgridConfigs')) : null;
-  if (sendgridConfigs) {
+  var sendgridConfigs = JSON.parse(localStorage.sendgridConfigs || '{}');
+  if (!$.isEmptyObject(sendgridConfigs)) {
     $('#sendgrid_key').val(sendgridConfigs.auth.api_key);
   }
 
